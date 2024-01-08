@@ -47,8 +47,7 @@ public class Geometry {
         return (num1+num2)*2;
     }
     public static int pariDispari(int number){
-        if(number%2==0){return 0;}
-        else{return 1;}
+        return number%2;
     }
     public static double areaTriangolo(float num1, float num2, float num3){
         float p=num1+num2+num3;
