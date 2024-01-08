@@ -21,10 +21,10 @@ public class MultiFunction {
                 System.out.println("Enter first string");
                 string1= scanner.nextLine();
 
-                System.out.println("Enter second string");
-                string2= scanner.nextLine();
+                System.out.println("Enter a number");
+                number1= scanner.nextInt();
 
-                System.out.println(concatena(string1,string2));
+                System.out.println(concatena(string1,number1));
                 break;
             case 2:
                 System.out.println("Enter number 1");
@@ -53,8 +53,8 @@ public class MultiFunction {
         stringArr[2]=string;
         return stringArr;
     }
-    public static String concatena(String string1,String string2){
-        return string1+" "+string2;
+    public static String concatena(String string1,int num){
+        return string1+" "+num;
     }
     public static int moltiplica(int number1,int number2){
         return number1*number2;

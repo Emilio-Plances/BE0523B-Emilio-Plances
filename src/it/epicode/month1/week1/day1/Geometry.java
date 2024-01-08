@@ -2,8 +2,6 @@ package it.epicode.month1.week1.day1;
 
 import java.util.Scanner;
 
-import static java.lang.Math.sqrt;
-
 public class Geometry {
     public static void main(String[] abs){
         Scanner scanner=new Scanner(System.in);
@@ -23,9 +21,13 @@ public class Geometry {
                 System.out.println(perimetroRettangolo(data1,data2));
                 break;
             case 2:
-                System.out.println("Se pari uscirà 1 altrimenti uscirà 0.\nInserisci numero");
+                System.out.println("Inserisci numero");
                 number=scanner.nextInt();
-                System.out.println(pariDispari(number));
+                if(pariDispari(number)==0){
+                    System.out.println("È pari");
+                }else{
+                    System.out.println("È dispari");
+                }
                 break;
             case 3:
                 System.out.println("Lato 1");
@@ -40,15 +42,13 @@ public class Geometry {
                 System.out.println("Il valore inserito non è valido");
                 break;
         }
-
-
     }
     public static float perimetroRettangolo(float num1,float num2){
         return (num1+num2)*2;
     }
     public static int pariDispari(int number){
-        if(number%2==0){return 1;}
-        else{return 0;}
+        if(number%2==0){return 0;}
+        else{return 1;}
     }
     public static double areaTriangolo(float num1, float num2, float num3){
         float p=num1+num2+num3;
