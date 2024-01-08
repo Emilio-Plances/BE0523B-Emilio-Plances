@@ -7,7 +7,7 @@ import static java.lang.Math.sqrt;
 public class Geometry {
     public static void main(String[] abs){
         Scanner scanner=new Scanner(System.in);
-        float dato1,dato2,dato3;
+        float data1,data2,data3;
         int number;
 
         System.out.println("Cosa vuoi fare? \n1.Perimetro Rettangolo\n2.Pari o Dispari\n3.Area Triangolo");
@@ -15,12 +15,12 @@ public class Geometry {
         switch(number){
             case 1:
                 System.out.println("Quanto è lunga la base?");
-                dato1=scanner.nextInt();
+                data1=scanner.nextInt();
 
                 System.out.println("Quanto è lunga l'altezza?");
-                dato2=scanner.nextInt();
+                data2=scanner.nextInt();
 
-                System.out.println(perimetroRettangolo(dato1,dato2));
+                System.out.println(perimetroRettangolo(data1,data2));
                 break;
             case 2:
                 System.out.println("Se pari uscirà 1 altrimenti uscirà 0.\nInserisci numero");
@@ -29,12 +29,12 @@ public class Geometry {
                 break;
             case 3:
                 System.out.println("Lato 1");
-                dato1= scanner.nextFloat();
+                data1= scanner.nextFloat();
                 System.out.println("Lato 2");
-                dato2= scanner.nextFloat();
+                data2= scanner.nextFloat();
                 System.out.println("Lato 1");
-                dato3= scanner.nextFloat();
-                System.out.println(areaTriangolo(dato1,dato2,dato3));
+                data3= scanner.nextFloat();
+                System.out.println(areaTriangolo(data1,data2,data3));
                 break;
             default:
                 System.out.println("Il valore inserito non è valido");
