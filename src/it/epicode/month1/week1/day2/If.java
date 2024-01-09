@@ -6,14 +6,16 @@ public class If {
     public static void main(String[] abs){
         Scanner scanner=new Scanner(System.in);
         int dato1;
-
-        System.out.println("Che vuoi fare?\n1.Pari o Dispari\n2.È bisestile?");
+        String stringa;
+        System.out.println("Che vuoi fare?\n1.Lunghezza Parola Pari o Dispari\n2.È bisestile?");
         dato1= scanner.nextInt();
+
         switch(dato1){
             case 1:
-                System.out.println("Inserire un numero");
-                dato1= scanner.nextInt();
-                System.out.println(oddEven(dato1));
+                scanner.nextLine();
+                System.out.println("Inserire una parola");
+                stringa= scanner.nextLine();
+                System.out.println(oddEven(stringa));
                 break;
             case 2:
                 System.out.println("Inserire un anno");
@@ -25,8 +27,8 @@ public class If {
         }
     }
 
-    public static String oddEven(int num) {
-        if (num % 2 == 0) {return "Pari";}
+    public static String oddEven(String string) {
+        if (string.length()% 2 == 0) {return "Pari";}
         else {return "Dispari";}
     }
 
