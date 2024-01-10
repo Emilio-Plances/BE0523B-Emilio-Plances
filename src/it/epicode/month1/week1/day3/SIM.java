@@ -42,7 +42,7 @@ public class SIM {
     public void call(String num,int time){
         double costoChiamata=cost*(time/60);
         removeCredit(costoChiamata);
-        if(getCredit()<0){
+        if(credit<0){
             addCredit(costoChiamata);
             System.out.println("Chiamata non effettuata");
             return;
