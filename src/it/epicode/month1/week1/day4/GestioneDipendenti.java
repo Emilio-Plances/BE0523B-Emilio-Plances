@@ -2,10 +2,10 @@ package it.epicode.month1.week1.day4;
 
 public class GestioneDipendenti {
     public static void main(String[] args) {
-        Dipendente dipendente1 =new Dipendente("AHUJHIHJG","PRODUZIONE");
-        Dipendente dipendente2 =new Dipendente("NUIGNJFGY","PRODUZIONE");
-        Dipendente dipendente3 =new Dipendente("FNSDJOHFS","AMMINISTRAZIONE");
-        Dipendente dipendente4 =new Dipendente("PDKMWIUHS","VENDITE");
+        Dipendente dipendente1 =new Dipendente("AHUJHIHJG",Dipartimento.PRODUZIONE);
+        Dipendente dipendente2 =new Dipendente("NUIGNJFGY",Dipartimento.PRODUZIONE);
+        Dipendente dipendente3 =new Dipendente("FNSDJOHFS",Dipartimento.AMMINISTRAZIONE);
+        Dipendente dipendente4 =new Dipendente("PDKMWIUHS",Dipartimento.VENDITE);
 
         System.out.println(dipendente3.promozione()+"\n");
         System.out.println(dipendente3.promozione()+"\n");

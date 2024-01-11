@@ -5,21 +5,21 @@ public class Dipendente {
     private String matricola;
     private double stipendio;
     private double importoOrarioStraordinario;
-    private String livello;
-    private String dipartimento;
-    public Dipendente(String matricola, String dipartimento){
+    private Livello livello;
+    private Dipartimento dipartimento;
+    public Dipendente(String matricola, Dipartimento dipartimento){
         this.matricola=matricola;
         this.dipartimento=dipartimento;
         stipendio=stipendioBase;
         importoOrarioStraordinario=30;
-        livello="OPERAIO";
+        livello=Livello.OPERAIO;
     }
     public Dipendente(
             double stipendio,
             String matricola,
             double importoOrarioStraordinario,
-            String livello,
-            String dipartimento){
+            Livello livello,
+            Dipartimento dipartimento){
 
         this.stipendio=stipendio;
         this.matricola=matricola;
@@ -40,11 +40,11 @@ public class Dipendente {
         return stipendio;
     }
 
-    public String getLivello() {
+    public Livello getLivello() {
         return livello;
     }
 
-    public String getDipartimento() {
+    public Dipartimento getDipartimento() {
         return dipartimento;
     }
 
@@ -52,7 +52,7 @@ public class Dipendente {
         return matricola;
     }
 
-    public void setDipartimento(String dipartimento) {
+    public void setDipartimento(Dipartimento dipartimento) {
         this.dipartimento = dipartimento;
     }
 
@@ -69,20 +69,20 @@ public class Dipendente {
     }
 
     public String promozione(){
-        if(livello.equals("DIRIGENTE")) return "Non può più salire di grado!";
-        if(livello.equals("QUADRO")){
-            livello="DIRIGENTE";
+        if(livello==Livello.DIRIGENTE) return "Non può più salire di grado!";
+        if(livello==Livello.QUADRO){
+            livello=Livello.DIRIGENTE;
             stipendio=stipendioBase*2;
         }
-        if(livello.equals("IMPIEGATO")){
-            livello="QUADRO";
+        if(livello==Livello.IMPIEGATO){
+            livello=Livello.QUADRO;
             stipendio=stipendioBase*1.5;
         }
-        if(livello.equals("OPERAIO")){
-            livello="IMPIEGATO";
+        if(livello==Livello.OPERAIO){
+            livello=Livello.IMPIEGATO;
             stipendio=stipendioBase*1.2;
         }
-        return "Promozione a "+livello.toLowerCase()+" effettuata con successo!";
+        return "Promozione a "+livello+" effettuata con successo!";
     }
 
     public static double calcolaPaga(Dipendente op){
