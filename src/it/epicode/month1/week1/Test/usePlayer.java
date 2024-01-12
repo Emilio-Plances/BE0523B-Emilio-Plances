@@ -6,6 +6,7 @@ public class usePlayer {
         MediaElement[] mediaArray=new MediaElement[5];
 
         for(int i=0; i<mediaArray.length; i++){
+            System.out.println("Only enter: 'music', 'video' or 'image'\nATTENTION! Any other choice will lead to a program crash.(miss Exceptions)");
             mediaArray[i]=createMedia(i);
         }
 
@@ -19,7 +20,7 @@ public class usePlayer {
         int gamma,volume;
 
         System.out.println(++i+".");
-        System.out.println("What kind of media do you want?");
+        System.out.println("What kind of media do you want? Music,video,image!");
         type= MediaType.valueOf(scanner.nextLine().toLowerCase());
 
         System.out.println("Enter a title");
@@ -66,11 +67,10 @@ public class usePlayer {
             System.out.println("Select a media:");
             printArray(mediaArray);
             input=scanner.nextInt();
-            if(input!=0){
-                control(input,mediaArray);
-            }
 
-            if(input>5){
+            if(input>=0 && input<5){
+                control(input,mediaArray);
+            }else{
                 System.out.println("Enter a valid value");
             }
         }while(input!=0);
