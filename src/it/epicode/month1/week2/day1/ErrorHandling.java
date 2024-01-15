@@ -3,6 +3,7 @@ package it.epicode.month1.week2.day1;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ErrorHandling {
@@ -26,6 +27,9 @@ public class ErrorHandling {
             }catch(WrongNumberException ex){
                 System.out.println(ex.getMessage());
                 logger.error("Valore non valido");
+                continue;
+            }catch(InputMismatchException ex){
+                System.out.println("Il pagliaccio dovevi fare!");
                 continue;
             }
             if(number==0) break;
