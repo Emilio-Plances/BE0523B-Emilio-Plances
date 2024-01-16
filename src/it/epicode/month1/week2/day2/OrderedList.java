@@ -39,7 +39,6 @@ public class OrderedList {
         scanner.nextLine();
         return n;
     }
-
     private static List<Integer> createSortedArray(int n){
         ArrayList<Integer> myList=new ArrayList<Integer>();
         for(int i=0;i<n;i++){

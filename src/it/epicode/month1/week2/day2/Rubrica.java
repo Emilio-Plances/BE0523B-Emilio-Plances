@@ -12,12 +12,13 @@ public class Rubrica {
         aggiungi("Emanuele","3279926375");
 
         stampaTutto();
+
         String nomeCercato="Emilio";
-        System.out.println("Il numero di "+nomeCercato+ " è "+cercaPerNome("Emilio"));
+        System.out.println("Il numero di "+nomeCercato+ " è "+cercaPerNome(nomeCercato));
 
         rimuovi("Mauro");
-        String cercaNumero="3270779083";
-        System.out.println("Il numero "+cercaNumero+" appartiene a "+cercaPerNumero("3270779083"));
+        String cercaNumero="327077908";
+        System.out.println("Il numero "+cercaNumero+" appartiene a "+cercaPerNumero(cercaNumero));
         stampaTutto();
     }
 
@@ -35,7 +36,7 @@ public class Rubrica {
         return "nessuno";
     }
     private static String cercaPerNome(String nome){
-        return rubrica.get(nome);
+        return rubrica.get(nome)!=null? rubrica.get(nome):"inesistente";
     }
     private static void stampaTutto(){
         Set<String> chiavi=rubrica.keySet();
@@ -43,4 +44,5 @@ public class Rubrica {
             System.out.println(c+": "+rubrica.get(c));
         }
     }
+
 }
