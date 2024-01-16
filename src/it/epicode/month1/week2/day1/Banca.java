@@ -1,7 +1,5 @@
 package it.epicode.month1.week2.day1;
-
 import org.slf4j.LoggerFactory;
-
 import org.slf4j.Logger;
 
 public class Banca {
@@ -30,7 +28,6 @@ public class Banca {
             System.out.println("Errore durante il prelievo "+e);
             e.printStackTrace();
             logger.error("Errore durante il prelievo");
-
         }
 
     }
