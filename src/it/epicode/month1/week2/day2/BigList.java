@@ -12,10 +12,11 @@ public class BigList {
 
         for(int i=0;i<n;i++){
             String sInput=enterString();
-            if(stringSet.add(sInput)) stringSet.add(sInput);
-            else duplicate.add(sInput);
+            if(!stringSet.add(sInput)) duplicate.add(sInput);
+            stringSet.add(sInput);
         }
-        System.out.println("Parole duplicate: "+duplicate);
+        if(duplicate.isEmpty()) System.out.println("Non ci sono doppioni");
+        else System.out.println("Parole duplicate: "+duplicate);
         System.out.println("Hai inserito "+stringSet.size()+" valori unici");
         System.out.println("Parole distinte: "+stringSet);
     }
