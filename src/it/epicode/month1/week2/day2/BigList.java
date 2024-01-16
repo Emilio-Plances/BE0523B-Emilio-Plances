@@ -15,14 +15,10 @@ public class BigList {
             if(stringSet.add(sInput)) stringSet.add(sInput);
             else duplicate.add(sInput);
         }
-
         System.out.println("Parole duplicate: "+duplicate);
         System.out.println("Hai inserito "+stringSet.size()+" valori unici");
         System.out.println("Parole distinte: "+stringSet);
-
-
     }
-
     public static String enterString(){
         System.out.println("Inserisci una parola");
         return scanner.nextLine();
