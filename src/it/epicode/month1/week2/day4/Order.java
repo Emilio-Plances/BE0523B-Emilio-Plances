@@ -1,8 +1,7 @@
-package it.epicode.month1.week2.day3;
+package it.epicode.month1.week2.day4;
 
 import java.time.LocalDate;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Order {
     private long id;
@@ -12,7 +11,7 @@ public class Order {
     private List<Product> products;
     private Customer customer;
 
-    public Order(long id,String status,LocalDate orderDate,List<Product> products,Customer customer){
+    public Order(long id, String status, LocalDate orderDate, List<Product> products, Customer customer){
         this.id=id;
         this.status=status;
         this.orderDate=orderDate;
