@@ -21,7 +21,7 @@ select extract(year from data_fattura) as anno, count(iva) from public.fatture w
 
 select extract(year from data_fattura) as anno, sum(importo) as totale, count(*) from public.fatture group by anno;
 
-select extract(year from data_fattura) as anno from public.fatture where tipologia='A' group by anno having count(*)>=2;
+select extract(year from data_fattura) as anno from public.fatture where tipologia='A' group by anno having count(*)>2;
 
 select regione_di_residenza, sum(importo) from public.fatture inner join public.clienti on id_cliente=numero_cliente group by regione_di_residenza;
 
